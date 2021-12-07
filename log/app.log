@@ -1,0 +1,35 @@
+02:30:58|PM: INFO [MainProcess] looger_info.py [<module>]: Mensaje Info
+02:30:58|PM: WARNING [MainProcess] looger_info.py [<module>]: Mensaje Warming
+02:30:58|PM: ERROR [MainProcess] looger_info.py [<module>]: Mensaje error
+02:30:58|PM: CRITICAL [MainProcess] looger_info.py [<module>]: Error Critico
+02:36:12|PM: CRITICAL [MainProcess] connexion.py [mk_pool]: connection to server at "localhost" (::1), port 5432 failed: FATAL:  no existe la base de datos «DB_practica»
+02:48:46|PM: WARNING [MainProcess] connexion.py [pool_drop]: Pool Liberado
+02:48:46|PM: WARNING [MainProcess] connexion.py [pool_close]: {cls._pool} cerrado
+02:48:59|PM: WARNING [MainProcess] connexion.py [pool_drop]: Pool Liberado
+02:48:59|PM: WARNING [MainProcess] connexion.py [pool_close]: <psycopg2.pool.SimpleConnectionPool object at 0x000001DF3EA507C0> cerrado
+02:49:32|PM: WARNING [MainProcess] connexion.py [pool_drop]: <psycopg2.pool.SimpleConnectionPool object at 0x000001C0716607F0> Liberado
+02:49:32|PM: WARNING [MainProcess] connexion.py [pool_close]: <psycopg2.pool.SimpleConnectionPool object at 0x000001C0716607F0> cerrado
+06:20:46|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'AttributeError'>:<traceback object at 0x000001EC4F21A140>
+06:20:46|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+06:21:56|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'AttributeError'>:<traceback object at 0x0000014A75C6A140>
+06:21:56|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+06:23:08|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'AttributeError'>:<class 'AttributeError'>
+06:23:08|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+06:23:21|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'AttributeError'>:'psycopg2.extensions.cursor' object has no attribute 'fetchal'
+06:23:21|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+10:08:47|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'TypeError'>:DAOAPP.encryp_pass() missing 1 required positional argument: 'password'
+10:08:47|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+10:09:55|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'psycopg2.errors.SyntaxError'>:error de sintaxis en o cerca de «FROM»
+LINE 1: UPDATE FROM usuarios_db SET password = 'b0ce6c1ea07a61ac4da7...
+               ^
+
+10:09:55|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+10:14:32|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'psycopg2.errors.SyntaxError'>:error de sintaxis en o cerca de «FROM»
+LINE 1: UPDATE FROM usuarios_db SET user_name= 'test', email= 'test@...
+               ^
+
+10:14:32|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+10:16:40|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'psycopg2.errors.NotNullViolation'>:el valor nulo en la columna «email» de la relación «usuarios_db» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (1, root, null, 21232f297a57a5a743894a0e4a801fc3).
+
+10:16:40|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
