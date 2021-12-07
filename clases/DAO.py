@@ -5,7 +5,7 @@ from looger_info import log
 
 
 class DAOAPP:
-    """Data Access Object 
+    """Data Access Object
 
     Controlador para el acceso a los datos de la base de datos.
     CRUD - Create, Read, Update, Delete
