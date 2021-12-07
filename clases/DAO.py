@@ -106,6 +106,10 @@ class DAOAPP:
             case _:
                 raise ValueError(f"'{upt_type}' no esta definido.")
 
+    @classmethod
+    def del_reg(cls, id_key: int):
+        pass
+
 if __name__ == '__main__':
     user_in = Users(user_name='root',email='root@app.com', password='rootadmin', id_key=2)
     users = DAOAPP.show_reg()
