@@ -33,3 +33,6 @@ LINE 1: UPDATE FROM usuarios_db SET user_name= 'test', email= 'test@...
 DETAIL:  La fila que falla contiene (1, root, null, 21232f297a57a5a743894a0e4a801fc3).
 
 10:16:40|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+01:32:06|PM: WARNING [MainProcess] looger_info.py [<module>]: Mensaje Warming
+01:32:06|PM: ERROR [MainProcess] looger_info.py [<module>]: Mensaje error
+01:32:06|PM: CRITICAL [MainProcess] looger_info.py [<module>]: Error Critico
