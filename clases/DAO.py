@@ -109,6 +109,14 @@ class DAOAPP:
     # Metodo para la eliminacion de registros en la bd.
     @classmethod
     def del_reg(cls, user: Users):
+        """Elimina un registro de la base de datos.
+
+        Args:
+            user (Users): Elemento usuario donde se extrae la propiedad identificadora para la eliminacion del registro.
+
+        Returns:
+            [int]: Numero de registros eliminados
+        """
         with PoolCursor() as cursor:
             data = (user.id_key,)
             cursor.execute(cls._DELETE, data)
