@@ -106,9 +106,15 @@ class DAOAPP:
             case _:
                 raise ValueError(f"'{upt_type}' no esta definido.")
 
+    # Metodo para la eliminacion de registros en la bd.
     @classmethod
-    def del_reg(cls, id_key: int):
-        pass
+    def del_reg(cls, user: Users):
+        with PoolCursor() as cursor:
+            data = (user.id_key,)
+            cursor.execute(cls._DELETE, data)
+            log.info('Registro eliminado...')
+            return cursor.rowcount
+
 
 if __name__ == '__main__':
     user_in = Users(user_name='root',email='root@app.com', password='rootadmin', id_key=2)
