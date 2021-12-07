@@ -1,11 +1,13 @@
 import logging as log
 
+_FILE = "C:\\Users\\mesas\\OneDrive\\Documentos\\APP_Practica\\log\\app.log"
+
 log.basicConfig(
     level= log.WARNING,
     format = "%(asctime)s: %(levelname)s [%(processName)s] %(filename)s [%(funcName)s]: %(message)s",
     datefmt = '%I:%M:%S|%p',
     handlers = [
-        log.FileHandler('../log/app.log'),
+        log.FileHandler(_FILE),
         log.StreamHandler()
     ],
 )

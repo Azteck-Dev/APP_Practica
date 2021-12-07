@@ -36,3 +36,17 @@ DETAIL:  La fila que falla contiene (1, root, null, 21232f297a57a5a743894a0e4a80
 01:32:06|PM: WARNING [MainProcess] looger_info.py [<module>]: Mensaje Warming
 01:32:06|PM: ERROR [MainProcess] looger_info.py [<module>]: Mensaje error
 01:32:06|PM: CRITICAL [MainProcess] looger_info.py [<module>]: Error Critico
+02:18:19|PM: INFO [MainProcess] connexion.py [mk_pool]: Conexion Exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000023575E47940>
+02:18:19|PM: INFO [MainProcess] connexion.py [pool_drop]: <psycopg2.pool.SimpleConnectionPool object at 0x0000023575E47940> Liberado
+02:18:19|PM: INFO [MainProcess] connexion.py [pool_close]: <psycopg2.pool.SimpleConnectionPool object at 0x0000023575E47940> cerrado
+02:36:37|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:{type(ask)} invalido, ingresa calores numericos "int" 
+02:36:37|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:{type(ask)} invalido, ingresa calores numericos "int" 
+02:37:20|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa calores numericos "int" 
+02:37:34|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa calores numericos "int" 
+02:38:45|PM: ERROR [MainProcess] main_app.py [main_menu]: <class 'Exception'>
+02:39:06|PM: ERROR [MainProcess] main_app.py [main_menu]: <class 'Exception'>
+02:40:11|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa calores numericos "int" 
+02:40:17|PM: ERROR [MainProcess] main_app.py [main_menu]: a no esta definido.
+02:40:45|PM: ERROR [MainProcess] main_app.py [main_menu]: <'a'> no esta definido.
+02:42:09|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa calores numericos "int" 
+02:42:17|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa calores numericos "int" 
