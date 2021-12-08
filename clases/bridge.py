@@ -2,17 +2,15 @@ import sys
 import os
 
 
-# getting the name of the directory
-# where the this file is present.
+# Obtengo el nombre del directorio desde donde esta este archivo.
 current = os.path.dirname(os.path.realpath(__file__))
 
-# Getting the parent directory name
-# where the current directory is present.
+# Obtengo el nombre de la carpeta padre de el archivo
 parent = os.path.dirname(current)
 
-# adding the parent directory to 
-# the sys.path.
+# Agrego la carpeta al path para su acceso.
 sys.path.append(parent)
 
-print(current)
-print(parent)
+if __name__ == '__main__':
+    print(current)
+    print(parent)
