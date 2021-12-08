@@ -38,7 +38,7 @@ def main_menu(menu:str = 'main'):
 
 def opt_val(ask: str):
     while not ask.isdigit():
-        log.warning(f'valor de tipo:{type(ask)} invalido, ingresa calores numericos "int" ')
+        log.warning(f"valor de tipo:{type(ask)} invalido, ingresa valores numericos <class 'int'>")
         ask = input()
     else:
         ask = int(ask)
