@@ -1,7 +1,7 @@
 from hashlib import md5
-from cls_users import Users
-from ConnHandler import PoolCursor
-from looger_info import log
+from clases.cls_users import Users
+from clases.ConnHandler import PoolCursor
+from clases.looger_info import log
 
 
 class DAOAPP:

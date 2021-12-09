@@ -1,5 +1,5 @@
 from psycopg2 import pool
-from looger_info import log
+from clases.looger_info import log
 import sys
 
 

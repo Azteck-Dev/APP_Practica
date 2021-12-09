@@ -1,6 +1,6 @@
-from connexion import Connexion
-from looger_info import log
-from cls_users import Users
+from clases.connexion import Connexion
+from clases.looger_info import log
+from clases.cls_users import Users
 import sys
 
 
