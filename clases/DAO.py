@@ -41,7 +41,7 @@ class DAOAPP:
             user (Users): objeto con los datos a ingresar
 
         Returns:
-            None: Ingresa el usuario a la base de datos
+            int: Devuelve el numero de lineas afectadas
         """
         user.password = cls.encryp_pass(user.password)
         data = (user.user_name, user.email, user.password)

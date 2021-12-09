@@ -53,3 +53,5 @@ DETAIL:  La fila que falla contiene (1, root, null, 21232f297a57a5a743894a0e4a80
 06:21:41|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña debe ser de una longitud minima de 6 caracteres.
 06:25:19|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña no debe incluir caracteres especiales ['/', '>', '<', '=', '\\', '&', '%', '#', '(', ')', ' '] ni espacios en blanco.
 06:25:30|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña debe ser de una longitud minima de 6 caracteres.
+06:29:03|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña debe ser de una longitud minima de 6 caracteres.
+06:29:08|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña no debe incluir caracteres especiales ['/', '>', '<', '=', '\\', '&', '%', '#', '(', ')', ' '] ni espacios en blanco.
