@@ -59,14 +59,21 @@ def opt_val(ask: str):
         return ask
 
 def fmt_pass(pwd: str):
-    invalid_words = ['/', '>', '<', '=', '\\', '&', '%', '#', '(', ')']
-    while invalid_words:
-        if not pwd in invalid_words:
-            if len(pwd) > 6:
-                return pwd
-        else:
-            log.warning('Formato de contraseña invalido, vuelve a ingresarla.')
-            pwd = input('')
+    invalid_words = ['/', '>', '<', '=', '\\', '&', '%', '#', '(', ')', ' ']
+    pwd_ok = ''
+    while not pwd_ok:
+        for char in pwd:
+            if not char in invalid_words and len(pwd) > 6:
+                pwd_ok = pwd
+                break
+            else:
+                if len(pwd) < 6:
+                    log.warning('La contraseña debe ser de una longitud minima de 6 caracteres.')
+                for char in pwd:
+                    if char in invalid_words:
+                        log.warning(f'La contraseña no debe incluir caracteres especiales {invalid_words} ni espacios en blanco.')
+                pwd = input('Ingresa una contraseña valida: ')
+    return pwd_ok
 
 if __name__ == '__main__':
 
