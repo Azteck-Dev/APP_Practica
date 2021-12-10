@@ -62,3 +62,8 @@ LINE 1: UPDATE usuarios_db SET username = 'Hana Sakura' WHERE id_key...
                                ^
 
 10:38:09|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..
+10:27:49|AM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'psycopg2.errors.InvalidTextRepresentation'>:la sintaxis de entrada no es válida para tipo integer: «yomehana»
+LINE 1: ...'42c8e9ee1d3399cc323194b17a3badc1' WHERE id_key = 'yomehana'
+                                                             ^
+
+10:27:49|AM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..

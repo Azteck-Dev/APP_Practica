@@ -28,6 +28,7 @@ class PoolCursor:
             sys.exit()
         else:
             self._connexion.commit()
+            Connexion.pool_drop(self._connexion)
             log.info("Transaccion finalizada...")
 
 

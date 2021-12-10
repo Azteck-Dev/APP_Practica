@@ -87,7 +87,7 @@ class DAOAPP:
             case 'username':
                 with PoolCursor() as cursor:
                     data = (user.user_name,user.id_key)
-                    cursor.execute('UPDATE usuarios_db SET username = %s WHERE id_key = %s', data)
+                    cursor.execute('UPDATE usuarios_db SET user_name = %s WHERE id_key = %s', data)
                     log.info(f'registro(s) actializado(s): {cursor.rowcount}')
                     return f'User name actualizado: {user.user_name}'
             case 'email':
