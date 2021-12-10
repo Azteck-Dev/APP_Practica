@@ -28,8 +28,10 @@ class PoolCursor:
             sys.exit()
         else:
             self._connexion.commit()
-            Connexion.pool_drop(self._connexion)
             log.info("Transaccion finalizada...")
+        # cierro el cursor y devuelvo la conexio al pool de conexiones.
+        self._cursor.close()
+        Connexion.pool_drop(self._connexion)
 
 
 if __name__ == "__main__":
