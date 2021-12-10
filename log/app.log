@@ -55,3 +55,10 @@ DETAIL:  La fila que falla contiene (1, root, null, 21232f297a57a5a743894a0e4a80
 06:25:30|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña debe ser de una longitud minima de 6 caracteres.
 06:29:03|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña debe ser de una longitud minima de 6 caracteres.
 06:29:08|PM: WARNING [MainProcess] main_app.py [fmt_pass]: La contraseña no debe incluir caracteres especiales ['/', '>', '<', '=', '\\', '&', '%', '#', '(', ')', ' '] ni espacios en blanco.
+09:02:25|PM: WARNING [MainProcess] main_app.py [<module>]: 7 no es una opcion valida elija una opcion entre 1 - 5
+10:17:20|PM: WARNING [MainProcess] main_app.py [opt_val]: valor de tipo:<class 'str'> invalido, ingresa valores numericos <class 'int'>
+10:38:09|PM: ERROR [MainProcess] ConnHandler.py [__exit__]: <class 'psycopg2.errors.UndefinedColumn'>:no existe la columna «username» en la relación «usuarios_db»
+LINE 1: UPDATE usuarios_db SET username = 'Hana Sakura' WHERE id_key...
+                               ^
+
+10:38:09|PM: WARNING [MainProcess] ConnHandler.py [__exit__]: Se realizo un RollBack..

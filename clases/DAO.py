@@ -74,7 +74,7 @@ class DAOAPP:
 
         Args:
             user (Users): Objeto con las propiedades a modificar del registro.
-            upt_type (str, optional): [all, name, password, email] segun lo que se desee modificar. Defaults to 'all'.
+            upt_type (str, optional): [all, username, password, email] segun lo que se desee modificar. Defaults to 'all'.
         """
         match upt_type:
             case 'all':

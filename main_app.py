@@ -90,7 +90,7 @@ if __name__ == '__main__':
 
     while not flag:
         main_menu()
-        ask = input()
+        ask = input('\nElija una opcion(1-5): ')
         ask = opt_val(ask)
         #Crear usuario.
         if ask == 1:
@@ -103,15 +103,68 @@ if __name__ == '__main__':
 
         # Consulta de usuarios.
         elif ask == 2:
-            pass
+            data = DAOAPP.show_reg()
+            for user in data:
+                print(f'''\n ID: {user.id_key}   User Name: {user.user_name}     Email: {user.email} ''')
+
         # Actualizar usuario.
         elif ask == 3:
-            pass
+            main_menu('update')
+            cont = 1
+            upt = 0
+            while not flag:
+                if cont == 1:
+                    opt = input('\nQue desea actualizar (1-5): ')
+                elif upt > 1:
+                    opt = input('\nDesea modificar algo mas(1-5): ')
+                else:
+                    opt = input('Ingresa un opcion valida(1-5): ')
+                match opt:
+                    case '1':
+                        id_key = input('Cual es el id a modificar: ')
+                        name = input('Ingrese el nuevo user name: ')
+                        email = input('Ingresa el nuevo email: ')
+                        keyword = fmt_pass(input('Ingresa la nueva contraseña: '))
+                        new_data = Users(id_key, name, keyword, email)
+                        row = DAOAPP.updt_reg(new_data)
+                        print(f'Se actualizo {row} usuario correctamente.')
+                        log.info(f'Se modifico {row} regitro en base de datos.')
+                        upt += 1
+                    case '2':
+                        id_key = input('Ingresa el id a modificar: ')
+                        name = input('Ingresa el nuevo user name: ')
+                        new_data = Users(user_name=name, id_key=id_key)
+                        row = DAOAPP.updt_reg(new_data ,upt_type='username')
+                        print('Se actualizo el username correctamente')
+                        log.info(f'Se modifico {row} atributo del id:{id_key}')
+                        upt += 1
+                    case '3':
+                        id_key = input('Ingresa el id a modificar: ')
+                        email = input('Ingresa el nuevo email: ')
+                        new_data = Users(email=email, id_key=id_key)
+                        row = DAOAPP.updt_reg(new_data, upt_type='email')
+                        print('Correo electronico actualizado.')
+                        log.info(f'Se modifico {row} atrinuto en el id:{id_key}')
+                        upt += 1
+                    case '4':
+                        id_key = input('Ingresa el id a modificar: ')
+                        password = input('Ingresa el nuevo password: ')
+                        new_data = Users(password=password, id_key= id_key)
+                        row = DAOAPP.updt_reg(new_data, upt_type='password')
+                        print('Password actualizado correctamente.')
+                        log.info(f'Se modifico {row} atributo en el id:{id_key}.')
+                        upt += 1
+                    case '5':
+                        break
+                    case _:
+                        cont += 1
+                        log.warning('Opcion invalida')
         # Eliminar usuario.
         elif ask == 4:
             pass
         # salir
         elif ask == 5:
             flag = True
+            sys.exit()
         else:
-            pass
+            log.warning(f"{ask} no es una opcion valida elija una opcion entre 1 - 5")
