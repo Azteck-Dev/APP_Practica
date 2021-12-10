@@ -91,8 +91,7 @@ if __name__ == '__main__':
 
     while not flag:
         main_menu()
-        ask = input('\nElija una opcion: ')
-        ask = opt_val(ask)
+        ask = opt_val(input('\nElija una opcion: '))
         #Crear usuario.
         if ask == 1:
             name = input('\nIngresa el nombre de usuario: ')
