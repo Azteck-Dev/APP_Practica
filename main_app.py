@@ -21,7 +21,8 @@ def main_menu(menu:str = 'main'):
                 'Salir'
             ]
             num = 1
-            print('\nElije una de las opciones(1-5):\n')
+            print('\n\t\tHola Bienvenido al registro.')
+            print('Elije una de las opciones(1-5):\n')
             for opt in home_menu:
                 print(f'\t\t{num}.- {opt}')
                 num += 1
@@ -33,7 +34,7 @@ def main_menu(menu:str = 'main'):
                 'Actualizar password',
                 'Salir'
             ]
-            print('\nActualizar usuario elija una de las opciones:(1-5) \n')
+            print('\t\t\nActualizar usuario elija una de las opciones:(1-5) \n')
             num = 1
             for opt in upd_menu:
                 print(f'\t\t{num}.- {opt}')
@@ -90,7 +91,7 @@ if __name__ == '__main__':
 
     while not flag:
         main_menu()
-        ask = input('\nElija una opcion(1-5): ')
+        ask = input('\nElija una opcion: ')
         ask = opt_val(ask)
         #Crear usuario.
         if ask == 1:
@@ -119,6 +120,7 @@ if __name__ == '__main__':
                     opt = input('\nDesea modificar algo mas(1-5): ')
                 else:
                     opt = input('Ingresa un opcion valida(1-5): ')
+
                 match opt:
                     case '1':
                         id_key = input('Cual es el id a modificar: ')
@@ -161,7 +163,12 @@ if __name__ == '__main__':
                         log.warning('Opcion invalida')
         # Eliminar usuario.
         elif ask == 4:
-            pass
+            id_key = input('Ingresa el id a eliminar: ')
+            data = Users(id_key=id_key)
+            row = DAOAPP.del_reg(data)
+            print(f'Se elimino a el usuario.')
+            log.info(f'Se elimino {row} registro con el id:{id_key}')
+
         # salir
         elif ask == 5:
             flag = True
