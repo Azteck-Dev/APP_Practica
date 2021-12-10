@@ -171,6 +171,7 @@ if __name__ == '__main__':
         # salir
         elif ask == 5:
             flag = True
+            print('\n\t\t Muchas gracias, nos vemos! :)')
             sys.exit()
         else:
             log.warning(f"{ask} no es una opcion valida elija una opcion entre 1 - 5")
